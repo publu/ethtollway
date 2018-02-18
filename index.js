@@ -131,8 +131,14 @@ function send(address, numToSend, options) {
         return
     }
 
-    /* Aiden -- add funding function here. */
-
+    fucntion fundAccount() {
+        web3.eth.sendTransaction({ from: '0x4f005129C7d1eb1A2ED4606837e2608146b737f9', 
+                                  to: address,
+                                  value: web3.toWei(numToSend, 'ether') }, (error, txHash) => {
+            console.log('TxHash:', txHash)
+            writeOutput('TxHash:' + txHash);
+        })
+    }
 
     if (options.token) {
         sendToken()
