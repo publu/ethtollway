@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EthTollway Instant Token Transfer - Pay in any ERC20 Token!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/main.css" rel="stylesheet" media="screen">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <div class="topbar">
+                <a class="navbar-brand" href=""><img src="img/logo6.png" class="logo"/></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">Menu</button>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="">Tracking</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+    <div class="jumbotron jumbotron-frontpage nav-collapse visible-md visible-lg">
+        <div class="container">
+            <h1 class="text-center">Instant Token Transfer</h1>
+        </div>
+    </div>
+    <!-- Conversion Selection -->
+    <div class="row pagination-center conversion-div">
+        <div class="conversion-form text-center">
+            <span class="large-inline">Send </span>
+            <span class="btn-group">
+
+            <select class="btn btn-lg btn-tollway">
+              <option value="token">Tokens</option>
+              <option value="omg">OMG</option>
+              <option value="dai">DAI</option>
+              <option value="grid">GRID</option>
+              <option value="aur">AUR</option>
+            </select>
+          </span>
+            <span class="large-inline"> to an address.</span>
+            <br/>
+            <div class="address-bar">
+                <div class="input-group text-center to-field">
+                    <span class="input-group-addon">to</span>
+                    <input type="text" class="form-control receiveAddress" placeholder="Destination address">
+                </div>
+            </div>
+            <br/>
+            <div class="btn-group">
+                <button type="button" class="btn btn-lg btn-tollway place-order">Submit</button>
+            </div>
+            <div id="spinner"></div>
+            <br/>
+            <div id="qrcode"></div>
+        </div>
+    </div>
+    <div class="container marketing less-space">
+        <!-- FOOTER -->
+        <footer>
+            <span class="pull-left">
+              </span>
+            <span class="pull-right">
+                     <a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="">support</a>
+                </span>
+        </footer>
+    </div>
+    <!-- /.container -->
+    <script src="js/jquery-1.10.1.min.js"></script>
+    <script src="js/uport-connect.min.js">
+    //
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

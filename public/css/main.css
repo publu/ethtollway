@@ -1,0 +1,169 @@
+html,
+body {
+    height: 100% !important;
+}
+
+.pgControl {
+    font-size: 120%;
+}
+
+.paragraphHidden {
+    display: none;
+}
+
+.paragraphtitle {
+    text-align: center;
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;
+}
+
+.btn-tollway {
+    color: #fff;
+    background-color: #664597;
+    border-color: #5d408c;
+}
+
+.paragraphtitle:hover {
+    background-color: white;
+    color: red;
+    cursor: url;
+}
+.btn:hover, .btn:focus {
+    color: #b795ea;
+    text-decoration: none;
+}
+select.btn-tollway {
+    padding: 0 1em;
+    line-height: 2em;
+    text-indent: 10px;
+    width: 105px;
+    height: 40px;
+}
+
+:invalid {
+    border-color: red;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.large-inline {
+    font-size: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    top: 5px;
+}
+
+.address-bar {
+    width: 400px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    background-color: white;
+}
+
+.conversion-div {}
+
+.logo {
+    width: 20%;
+    margin: 5px;
+}
+
+.jumbotron-frontpage {
+
+    background-image: url(../img/shattered_@2X.png);
+    background-repeat: repeat;
+    color: white;
+    /*
+	color:white;
+	background-image: linear-gradient(bottom, rgb(184,6,6) 45%, rgb(247,5,5) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(184,6,6) 45%, rgb(247,5,5) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(184,6,6) 45%, rgb(247,5,5) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(184,6,6) 45%, rgb(247,5,5) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(184,6,6) 45%, rgb(247,5,5) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.45, rgb(184,6,6)),
+		color-stop(1, rgb(247,5,5))
+	);
+*/
+}
+
+.place-order a {
+
+    color: inherit;
+    /* blue colors for links too */
+    text-decoration: inherit;
+    /* no underline */
+}
+
+.error {
+    margin-top: 10px;
+}
+
+.upopulated {
+    display: none;
+}
+
+.nocode {
+    display: none;
+}
+
+.qr-place img {
+    width: 100%;
+}
+
+.track-well {
+    position: relative;
+    top: 10px;
+}
+
+.exchrate {
+    margin: 5px;
+}
+
+.to-receive {
+    width: 30% !important;
+}
+
+.less-space {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.col-lg-4 p {
+    margin-bottom: 10px;
+}
+
+.container {
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 30px;
+}
+
+@media (max-width:780px) {
+    .navbar {
+        text-align: center;
+    }
+    .logo {
+        width: 100%;
+        margin: 0px;
+        max-width: 300px;
+    }
+}
+
+.secureid {
+    margin-bottom: 10px;
+}

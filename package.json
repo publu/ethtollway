@@ -1,0 +1,26 @@
+{
+  "name": "uport-wallet-cli",
+  "version": "0.0.5",
+  "description": "A uport cli wallet for ether and erc20 tokens",
+  "main": "index.js",
+  "bin": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "commander": "^2.11.0",
+    "express": "^4.16.2",
+    "http": "0.0.0",
+    "mnid": "^0.1.1",
+    "morgan": "^1.9.0",
+    "qr-image": "^3.2.0",
+    "qrcode-terminal": "^0.11.0",
+    "reload": "^2.2.2",
+    "uport-connect": "^0.7.0-alpha-1",
+    "watch": "^1.0.2"
+  }
+}
