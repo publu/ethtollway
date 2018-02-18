@@ -80,13 +80,13 @@ var stdin = process.openStdin();
 stdin.addListener("data", function(d) {
     var input = d.toString().trim();
     console.log("input: " + input);
-    if(input=="balance"){
+    if (input == "balance") {
         getBalance();
     }
-    if(input.indexOf("send") !=-1){
+    if (input.indexOf("send") != -1) {
         input = input.split(" ");
         var options = {};
-        send(input[1],input[2],options);
+        send(input[1], input[2], options);
     }
 });
 
@@ -139,6 +139,22 @@ function send(address, numToSend, options) {
             writeOutput('TxHash:' + txHash);
         })
     }
+
+    const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
+    const Web_3 = require('web3');
+
+    const provider = new HDWalletProvider(
+        'YOUR MNEMONIC HERE',
+        'https://rinkeby.infura.io/LzaBsZ68c7VA3XP0BoBY' // yes, that's my infura key
+    );
+    const web_3 = new Web3(provider);
+
+    const ethamt = 0.01; // Amount of eth to transfer
+    const toAddr = address; // Address to transfer eth to
+
+    async() => {
+        await web_3.eth.sendTransaction({ from: '0x4f005129C7d1eb1A2ED4606837e2608146b737f9', to: toAddr, value: web3.toWei(ethamt, "ether") });
+    };
 
     if (options.token) {
         sendToken()
