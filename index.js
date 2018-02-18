@@ -130,6 +130,10 @@ function send(address, numToSend, options) {
         output = 'Please provide address and amount';
         return
     }
+
+    /* Aiden -- add funding function here. */
+
+
     if (options.token) {
         sendToken()
     } else {
