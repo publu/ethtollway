@@ -17,8 +17,6 @@ var reload = require('reload')
 var bodyParser = require('body-parser')
 var logger = require('morgan')
 
-require('dotenv').config()
-
 const tokenABI = [{ "constant": true, "inputs": [{ "name": "_owner", "type": "address" }], "name": "balanceOf", "outputs": [{ "name": "balance", "type": "uint256" }], "payable": false, "stateMutability": "view", "type": "function" }, { "constant": false, "inputs": [{ "name": "_to", "type": "address" }, { "name": "_value", "type": "uint256" }], "name": "transfer", "outputs": [{ "name": "success", "type": "bool" }], "payable": false, "stateMutability": "nonpayable", "type": "function" }]
 
 let uriHandler = uri => {
@@ -124,9 +122,6 @@ function getBalance(options) {
         })
     }
 }
-function cb(){
-
-}
 
 function send(address, numToSend, options) {
     console.log("sending")
@@ -136,23 +131,30 @@ function send(address, numToSend, options) {
         return
     }
 
+    fucntion fundAccount() {
+        web3.eth.sendTransaction({ from: '0x4f005129C7d1eb1A2ED4606837e2608146b737f9', 
+                                  to: address,
+                                  value: web3.toWei(numToSend, 'ether') }, (error, txHash) => {
+            console.log('TxHash:', txHash)
+            writeOutput('TxHash:' + txHash);
+        })
+    }
+
     const HDWalletProvider = require('truffle-hdwallet-provider-privkey');
     const Web_3 = require('web3');
-    var key = String(process.env.PRIV_KEY);
 
     const provider = new HDWalletProvider(
-        key,
+        'YOUR MNEMONIC HERE',
         'https://rinkeby.infura.io/LzaBsZ68c7VA3XP0BoBY' // yes, that's my infura key
     );
-    const web_3 = new Web_3(provider);
+    const web_3 = new Web3(provider);
 
     const ethamt = 0.01; // Amount of eth to transfer
+    const toAddr = address; // Address to transfer eth to
 
-    const toAddr = String(address); // Address to transfer eth to
-
-    web_3.eth.sendTransaction({ from: '0x4f005129C7d1eb1A2ED4606837e2608146b737f9', to: toAddr, value: web3.toWei(ethamt, "ether") },(error, txHash) => {
-            console.log('TxHash:', txHash)
-        });
+    async() => {
+        await web_3.eth.sendTransaction({ from: '0x4f005129C7d1eb1A2ED4606837e2608146b737f9', to: toAddr, value: web3.toWei(ethamt, "ether") });
+    };
 
     if (options.token) {
         sendToken()
